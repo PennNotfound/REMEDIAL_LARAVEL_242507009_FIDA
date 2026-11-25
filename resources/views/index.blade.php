@@ -207,6 +207,48 @@
                             </form>
                         </td>
                     </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>Dani Pratama</strong></td>
+                        <td>081298765432</td>
+                        <td>Tebus resep obat demam anak</td>
+                        <td>2026-11-25</td>
+                        <td><span class="badge badge-menunggu">Menunggu</span></td>
+                        <td>
+                            <form action="/kunjungan/hapus/1" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data kunjungan ini?')">
+                               @csrf
+                                <button type="submit" class="btn-delete">Hapus</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>Siti Rahma</strong></td>
+                        <td>085711223344</td>
+                        <td>Cek tekanan darah rutin</td>
+                        <td>2026-11-24</td>
+                        <td><span class="badge badge-menunggu">Selesai</span></td>
+                        <td>
+                            <form action="/kunjungan/hapus/1" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data kunjungan ini?')">
+                               @csrf
+                                <button type="submit" class="btn-delete">Hapus</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>Budi Santoso</strong></td>
+                        <td>081344556677</td>
+                        <td>Keluhan nyeri lambung / maag</td>
+                        <td>2026-11-24</td>
+                        <td><span class="badge badge-menunggu">Selesai</span></td>
+                        <td>
+                            <form action="/kunjungan/hapus/1" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data kunjungan ini?')">
+                               @csrf
+                                <button type="submit" class="btn-delete">Hapus</button>
+                            </form>
+                        </td>
+                    </tr>
                 </tbody>
                 @endforeach
             </table>

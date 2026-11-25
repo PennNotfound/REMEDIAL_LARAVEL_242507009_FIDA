@@ -13,3 +13,4 @@ Route::get('/Kunjungan',[KunjunganController::class, 'index']);
 Route::get('/kunjungan/tambah',[KunjunganController::class, 'tambah']);
 Route::post('/kunjungan/simpan',[KunjunganController::class, 'simpan']);
 Route::post('/kunjungan/hapus/{id}',[KunjunganController::class, 'hapus']);
+Route::get('/kunjungan',[KunjunganController::class, 'index']);
