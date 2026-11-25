@@ -21,5 +21,9 @@ class KunjunganController extends Controller
         Kunjungan::create($request->all());
         return redirect('/kunjungan');
     }
-    public
+    public function hapus ($id)
+    {
+        Kunjungan::where('id_kunjungan',$id)->delete();
+        return redirect('/kunjungan');
+    }
 }
