@@ -18,12 +18,21 @@ class KunjunganController extends Controller
     }
     public function simpan(Request $request) 
     {
+        $request->validate([
+            'nama_pasien' => 'required',
+            'no_telpon' => 'required',
+            'keluhan' => 'required',
+            'tanggal_kunjungan' => 'required|date',
+            'status' => 'required'
+        ]);
+
         Kunjungan::create($request->all());
         return redirect('/kunjungan');
     }
     public function hapus ($id)
     {
-        Kunjungan::where('id_kunjungan',$id)->delete();
+        $kunjungan = Kunjungan::findOrfail($id);
+        $kunjungan->delete();
         return redirect('/kunjungan');
     }
 }

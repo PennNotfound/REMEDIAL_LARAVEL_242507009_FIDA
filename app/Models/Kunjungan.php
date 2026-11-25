@@ -12,8 +12,9 @@ class Kunjungan extends Model
 
     public $timestamps = false;
 
-    public $fillable = [
+    protected $fillable = [
         'nama_pasien',
+        'no_telpon',
         'keluhan',
         'tanggal_kunjungan',
         'status'

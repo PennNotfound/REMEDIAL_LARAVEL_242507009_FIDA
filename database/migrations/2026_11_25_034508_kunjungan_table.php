@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        
+        Schema::create('kunjungan',function(Blueprint $table)
+        {
+            $table->integer('id_kunjungan');
+            $table->string('nama_pasien');
+            $table->string('no_telepon');
+            $table->text('keluhan');
+            $table->date('tanggal_kunjungan');
+            $table->enum('status' ,['Menunggu', 'Selesai']);
+            $table->timestamps();
+        });
     }
 
     /**
